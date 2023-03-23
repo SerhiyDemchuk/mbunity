@@ -34,8 +34,6 @@ Please implement your solution in your preferred techologies from the below:
 
 - **Build page according Figma file using React.**
 
-
 ## Good luck
 
 And don't forget to notify the Recruiter once you're done!
-
