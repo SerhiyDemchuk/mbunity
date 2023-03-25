@@ -19,7 +19,8 @@
       "@/*": ["./src/*"],
       "@app/*": ["./src/app/*"],
       "@pages/*": ["./src/pages/*"],
-      "@components/*": ["./src/components/*"],
+      "@shared/*": ["./src/shared/*"],
+      "@widgets/*": ["./src/widgets/*"],
     }
 
   },
