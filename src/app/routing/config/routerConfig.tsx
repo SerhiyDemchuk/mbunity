@@ -1,22 +1,15 @@
 import { RouteProps } from 'react-router-dom';
 
 import {
-  AboutPage,
   BlogPage,
   HomePage,
   ShopPage,
+  AboutPage,
   ContactPage,
   FeaturesPage,
   NotFoundPage,
 } from '@/pages';
-import {
-  getRouteBlog,
-  getRouteHome,
-  getRouteShop,
-  getRouteAbout,
-  getRouteContact,
-  getRouteFeatures,
-} from '@app/routing/config/routes';
+import { routes } from '@app/routing/config/routes';
 
 export enum AppRoutes {
   HOME = 'home',
@@ -29,29 +22,31 @@ export enum AppRoutes {
   NOT_FOUND = 'not_found',
 }
 
+const { blog, contact, home, shop, features, about } = routes;
+
 export const routeConfig: Record<AppRoutes, RouteProps> = {
   [AppRoutes.HOME]: {
-    path: getRouteHome(),
+    path: home,
     element: <HomePage />,
   },
   [AppRoutes.SHOP]: {
-    path: getRouteShop(),
+    path: shop,
     element: <ShopPage />,
   },
   [AppRoutes.ABOUT]: {
-    path: getRouteAbout(),
+    path: about,
     element: <AboutPage />,
   },
   [AppRoutes.BLOG]: {
-    path: getRouteBlog(),
+    path: blog,
     element: <BlogPage />,
   },
   [AppRoutes.FEATURES]: {
-    path: getRouteFeatures(),
+    path: features,
     element: <FeaturesPage />,
   },
   [AppRoutes.CONTACT]: {
-    path: getRouteContact(),
+    path: contact,
     element: <ContactPage />,
   },
   [AppRoutes.NOT_FOUND]: {

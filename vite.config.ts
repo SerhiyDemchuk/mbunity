@@ -20,8 +20,12 @@ export default defineConfig({
         replacement: path.resolve(__dirname, 'src/app'),
       },
       {
-        find: '@components',
-        replacement: path.resolve(__dirname, 'src/components'),
+        find: '@shared',
+        replacement: path.resolve(__dirname, 'src/shared'),
+      },
+      {
+        find: '@widgets',
+        replacement: path.resolve(__dirname, 'src/widgets'),
       },
     ],
   },
