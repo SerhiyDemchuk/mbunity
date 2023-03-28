@@ -5,13 +5,19 @@
 
   /*color-scheme: light dark;*/
   /*color: rgba(255, 255, 255, 0.87);*/
-  /*background-color: #242424;*/
+  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 a {
@@ -64,4 +70,8 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+* {
+  box-sizing: border-box;
 }

@@ -1,9 +1,3 @@
-import { memo } from 'react';
-
-interface NotFoundPageProps {}
-
-export const NotFoundPage = memo((props: NotFoundPageProps) => {
-  const {} = props;
-
+export const NotFoundPage = () => {
   return <div>NotFoundPage</div>;
-});
+};

@@ -1,11 +1,5 @@
-import { memo } from 'react';
-
-interface ShopPageProps {}
-
-const ShopPage = memo((props: ShopPageProps) => {
-  const {} = props;
-
+const ShopPage = () => {
   return <div>ShopPage</div>;
-});
+};
 
 export default ShopPage;
