@@ -1,11 +1,5 @@
-import { memo } from 'react';
-
-interface AboutPageProps {}
-
-const AboutPage = memo((props: AboutPageProps) => {
-  const {} = props;
-
+const AboutPage = () => {
   return <div>AboutPage</div>;
-});
+};
 
 export default AboutPage;

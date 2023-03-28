@@ -1,4 +1,3 @@
-import { memo } from 'react';
 import { NavLink } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 import Typography, { TypographyProps } from '@mui/material/Typography';
@@ -16,7 +15,7 @@ const CustomTypography = styled(Typography)({
 
 interface LogoProps extends TypographyProps {}
 
-export const Logo = memo((props: LogoProps) => {
+export const Logo = (props: LogoProps) => {
   const { variant = 'h6', noWrap } = props;
   return (
     <NavLink to="/">
@@ -25,4 +24,4 @@ export const Logo = memo((props: LogoProps) => {
       </CustomTypography>
     </NavLink>
   );
-});
+};

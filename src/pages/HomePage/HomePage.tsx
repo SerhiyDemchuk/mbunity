@@ -1,11 +1,8 @@
-import { memo, useState } from 'react';
-import reactLogo from '../../assets/react.svg';
+import { useState } from 'react';
+import reactLogo from '@assets/react.svg';
 import '../../App.css';
 
-interface HomePageProps {}
-
-const HomePage = memo((props: HomePageProps) => {
-  const {} = props;
+const HomePage = () => {
   const [count, setCount] = useState(0);
 
   return (
@@ -32,6 +29,6 @@ const HomePage = memo((props: HomePageProps) => {
       </p>
     </>
   );
-});
+};
 
 export default HomePage;

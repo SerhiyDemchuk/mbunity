@@ -1,5 +1,5 @@
-import { NavLink, LinkProps } from 'react-router-dom';
 import { forwardRef } from 'react';
+import { NavLink, LinkProps } from 'react-router-dom';
 
 interface NavLinkProps extends LinkProps {
   text: string;

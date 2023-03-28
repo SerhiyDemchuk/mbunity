@@ -8,17 +8,17 @@ import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import CloseIcon from '@mui/icons-material/Close';
 
-import User from '../../assets/user.svg';
-import UserWhite from '../../assets/user_white.svg';
-import Cart from '../../assets/cart.svg';
-import CartWhite from '../../assets/cart_white.svg';
-import Burger from '../../assets/burger.svg';
+import User from '@assets/user.svg';
+import UserWhite from '@assets/user_white.svg';
+import Cart from '@assets/cart.svg';
+import CartWhite from '@assets/cart_white.svg';
+import Burger from '@assets/burger.svg';
 import { Link, Logo, Icon } from '@shared/ui';
 import Drawer from '@mui/material/Drawer';
 
 interface HeaderProps {}
 
-export const Header = memo((props: HeaderProps) => {
+export const Header = () => {
   const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
@@ -32,8 +32,6 @@ export const Header = memo((props: HeaderProps) => {
   return (
     <AppBar position="static" color="transparent" elevation={0}>
       <Container maxWidth={false}>
-        {/*<Navigation />*/}
-        {/*<NavigationMobile />*/}
         <Toolbar
           disableGutters
           sx={{
@@ -92,9 +90,9 @@ export const Header = memo((props: HeaderProps) => {
             <Box
               width="100%"
               display="flex"
+              justifyContent="space-between"
               alignItems="center"
               flexDirection="row"
-              justifyContent="space-between"
             >
               <Logo
                 sx={{ display: { xs: 'flex', md: 'none', color: 'white' } }}
@@ -105,11 +103,11 @@ export const Header = memo((props: HeaderProps) => {
             </Box>
 
             <Box
-              height="100%"
-              display="flex"
               width="100%"
-              flexDirection="column"
+              display="flex"
               justifyContent="space-between"
+              height="100%"
+              flexDirection="column"
               alignItems="flex-start"
             >
               <Box display="flex" flexDirection="column">
@@ -131,4 +129,4 @@ export const Header = memo((props: HeaderProps) => {
       </Container>
     </AppBar>
   );
-});
+};
