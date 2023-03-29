@@ -11,7 +11,7 @@ export const Link = forwardRef<
   HTMLAnchorElement,
   Omit<NavLinkProps, 'to'> & { href: LinkProps['to'] }
 >((props, ref) => {
-  const { href, text, white, vertical, ...other } = props;
+  const { href, text, white = true, vertical, ...other } = props;
   const navLinkStyles = ({ isActive }: { isActive: boolean }) => ({
     fontWeight: isActive ? 'bold' : 'normal',
     color: white ? 'white' : 'black',

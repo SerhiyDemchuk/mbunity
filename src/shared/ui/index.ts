@@ -1,3 +1,4 @@
+export { Text } from '@shared/ui/Text/Text';
 export { Icon } from '@shared/ui/Icon/Icon';
 export { Link } from '@shared/ui/Link/Link';
 export { Logo } from '@shared/ui/Logo/Logo';
