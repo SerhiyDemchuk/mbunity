@@ -8,18 +8,20 @@ const CustomTypography = styled(Typography)({
   fontWeight: 800,
   fontSize: 24,
   flexGrow: 0,
-  color: 'black',
   lineHeight: '29px',
   textDecoration: 'none',
 }) as typeof Typography;
 
-interface LogoProps extends TypographyProps {}
-
-export const Logo = (props: LogoProps) => {
-  const { variant = 'h6', noWrap } = props;
+export const Logo = (props: TypographyProps) => {
+  const { variant = 'h6', noWrap, color = 'black' } = props;
   return (
     <NavLink to="/">
-      <CustomTypography variant={variant} noWrap={noWrap} {...props}>
+      <CustomTypography
+        color={color}
+        variant={variant}
+        noWrap={noWrap}
+        {...props}
+      >
         Logo Here
       </CustomTypography>
     </NavLink>

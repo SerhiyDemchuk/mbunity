@@ -1,4 +1,3 @@
-import { memo } from 'react';
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -15,8 +14,6 @@ import CartWhite from '@assets/cart_white.svg';
 import Burger from '@assets/burger.svg';
 import { Link, Logo, Icon } from '@shared/ui';
 import Drawer from '@mui/material/Drawer';
-
-interface HeaderProps {}
 
 export const Header = () => {
   const [open, setOpen] = React.useState(false);
@@ -42,12 +39,12 @@ export const Header = () => {
           <Logo sx={{ display: { xs: 'none', md: 'flex' } }} />
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-              <Link href="/" text="Home" />
-              <Link href="/features" text="Features" />
-              <Link href="/blog" text="Blog" />
-              <Link href="/shop" text="Shop" />
-              <Link href="/about" text="About" />
-              <Link href="/contact" text="Contact" />
+              <Link white={false} href="/" text="Home" />
+              <Link white={false} href="/features" text="Features" />
+              <Link white={false} href="/blog" text="Blog" />
+              <Link white={false} href="/shop" text="Shop" />
+              <Link white={false} href="/about" text="About" />
+              <Link white={false} href="/contact" text="Contact" />
             </Box>
 
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>

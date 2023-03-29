@@ -1,7 +1,7 @@
 import './App.css';
 import { Suspense } from 'react';
 import { AppRouter } from '@app/routing';
-import { Header } from '@/widgets';
+import { Footer, Header } from '@/widgets';
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
       <Suspense fallback="Loading...">
         <AppRouter />
       </Suspense>
+      <Footer />
     </div>
   );
 }

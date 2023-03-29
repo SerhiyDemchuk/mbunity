@@ -51,65 +51,63 @@ export const ContactForm = () => {
   };
 
   return (
-    <Wrapper>
-      <form onSubmit={submitForm}>
-        <Grid container spacing={2} style={{ margin: 0, width: '100%' }}>
-          <Input label="First Name" onChange={handleFirstName} />
-          <Input label="Last Name" onChange={handleLastName} />
-          <Input label="Email" type="email" onChange={handleEmail} />
-          <Input
-            label="Phone Number"
-            type="number"
-            onChange={handlePhoneNumber}
-          />
-        </Grid>
-        <Box my={5} pl={2}>
-          <Subtitle variant="h6">Select Subject?</Subtitle>
-          <RadioGroup
-            row
-            onChange={handleSubject}
-            defaultValue="General Inquiry 1"
-          >
-            <FormControlLabel
-              value="General Inquiry 1"
-              control={<Radio />}
-              label="General Inquiry"
-            />
-            <FormControlLabel
-              value="General Inquiry 2"
-              control={<Radio />}
-              label="General Inquiry"
-            />
-            <FormControlLabel
-              value="General Inquiry 3"
-              control={<Radio />}
-              label="General Inquiry"
-            />
-            <FormControlLabel
-              value="General Inquiry 4"
-              control={<Radio />}
-              label="General Inquiry"
-            />
-          </RadioGroup>
-        </Box>
+    <Wrapper component="form" onSubmit={submitForm}>
+      <Grid container spacing={2} style={{ margin: 0, width: '100%' }}>
+        <Input label="First Name" onChange={handleFirstName} />
+        <Input label="Last Name" onChange={handleLastName} />
+        <Input label="Email" type="email" onChange={handleEmail} />
         <Input
-          onChange={handleMessage}
-          label="Message"
-          placeholder="Write your message..."
-          md={12}
-          pl={2}
+          label="Phone Number"
+          type="number"
+          onChange={handlePhoneNumber}
         />
-        <Box
-          display="flex"
-          sx={{
-            justifyContent: { xs: 'center', md: 'flex-end' },
-          }}
+      </Grid>
+      <Box my={5} pl={2}>
+        <Subtitle variant="h6">Select Subject?</Subtitle>
+        <RadioGroup
+          row
+          onChange={handleSubject}
+          defaultValue="General Inquiry 1"
         >
-          <SubmitButton type="submit" disableElevation variant="contained">
-            Send Message
-          </SubmitButton>
-        </Box>
-      </form>
+          <FormControlLabel
+            value="General Inquiry 1"
+            control={<Radio />}
+            label="General Inquiry"
+          />
+          <FormControlLabel
+            value="General Inquiry 2"
+            control={<Radio />}
+            label="General Inquiry"
+          />
+          <FormControlLabel
+            value="General Inquiry 3"
+            control={<Radio />}
+            label="General Inquiry"
+          />
+          <FormControlLabel
+            value="General Inquiry 4"
+            control={<Radio />}
+            label="General Inquiry"
+          />
+        </RadioGroup>
+      </Box>
+      <Input
+        onChange={handleMessage}
+        label="Message"
+        placeholder="Write your message..."
+        md={12}
+        pl={2}
+      />
+      <Box
+        display="flex"
+        sx={{
+          justifyContent: { xs: 'center', md: 'flex-end' },
+        }}
+      >
+        <SubmitButton type="submit" disableElevation variant="contained">
+          Send Message
+        </SubmitButton>
+      </Box>
       <Image src={LetterSend} />
     </Wrapper>
   );

@@ -11,14 +11,14 @@ import styled from '@mui/material/styles/styled';
 
 export const ContactInfo = () => {
   return (
-    <ContactInfoWrapper>
+    <Wrapper>
       <Box display="flex" flexDirection="column">
         <Title variant="h2">Contact Information</Title>
         <Subtitle variant="h6">Say something to start a live chat!</Subtitle>
       </Box>
       <Box sx={{ my: { md: 10, xs: 1 } }}>
         {contactInfo.map(({ contact, icon }, index) => (
-          <InformationItem key={index} icon={icon} info={contact} />
+          <InformationItem fullWidth key={index} icon={icon} info={contact} />
         ))}
       </Box>
       <Box>
@@ -31,11 +31,11 @@ export const ContactInfo = () => {
       </Box>
       <EllipseSm src={EllipseSmall} />
       <EllipseBg src={EllipseBig} />
-    </ContactInfoWrapper>
+    </Wrapper>
   );
 };
 
-export const ContactInfoWrapper = styled(Box)(({ theme }) => ({
+export const Wrapper = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down('md')]: {
     maxWidth: '100%',
   },
